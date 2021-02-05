@@ -10,19 +10,9 @@ request.onload = function(){
     console.log(dados);
     var caixa = document.getElementById("caixa");
     for (var i = 0; i < 6; i++) {
-        if (i == 0) {
-            var newUl = document.createElement("ul");
-            newUl.classList.add("container");
-            caixa.appendChild(newUl);
-        }   
-        if (i == 3) {
-            var newUl = document.createElement("ul");
-            newUl.classList.add("container");
-            caixa.appendChild(newUl);
-        }   
         var newDiv = document.createElement("div");
         newDiv.classList.add("img_wrap");
-        newUl.appendChild(newDiv);
+        caixa.appendChild(newDiv);
         var newImg = document.createElement("img");
         newImg.classList.add("foto");
         newImg.src = dados[i].foto
